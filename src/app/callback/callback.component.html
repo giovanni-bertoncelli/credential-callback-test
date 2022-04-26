@@ -1,0 +1,9 @@
+<p>callback works! <br /> <br />
+  jwt: {{jwt}}<br />
+  renewIn: {{renewIn}}
+</p>
+
+<a (click)="test()">Test jwt</a>
+<p [ngClass]="{'text-success': res1Ok, 'text-danger': !res1Ok}"> {{res1}}<br /></p>
+<a (click)="refresh()">Test refresh cookie</a>
+<p [ngClass]="{'text-success': res2Ok, 'text-danger': !res2Ok}"> {{res2}}<br /></p>
