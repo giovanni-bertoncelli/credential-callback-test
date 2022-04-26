@@ -38,7 +38,7 @@ export class CallbackComponent implements OnInit {
   }
 
   test() {
-    this.http.get('http://localhost:3000/test', {
+    this.http.get('http://test.local:8080/api/test', {
       headers: { 'Authorization': `Bearer ${this.jwt}` },
       withCredentials: true
     }).subscribe((res) => {
@@ -51,7 +51,7 @@ export class CallbackComponent implements OnInit {
   }
 
   refresh() {
-    this.http.get('http://localhost:3000/refresh', {
+    this.http.get('http://test.local:8080/api/refresh', {
       headers: { 'Authorization': `Bearer ${this.jwt}` },
       withCredentials: true
     }).subscribe((res) => {
